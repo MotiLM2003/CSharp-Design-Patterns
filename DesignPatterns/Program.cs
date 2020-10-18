@@ -6,7 +6,10 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hellosst Moyti");
+            Journal jornal = new Journal();
+            Console.WriteLine(jornal.count);
+
+            Console.WriteLine("Testing Commit number 3");
         }
     }
 }
