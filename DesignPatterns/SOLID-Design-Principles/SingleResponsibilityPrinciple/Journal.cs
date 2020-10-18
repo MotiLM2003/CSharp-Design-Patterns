@@ -7,7 +7,26 @@ namespace DesignPatterns
 {
     public class Journal
     {
+
+
         private List<string> entries = new List<string>();
-        public int count { get; set; }
+        private int count { get; set; }
+
+        public int AddEntry(string text)
+        {
+            entries.Add($"{++count} {text}");
+            return count; // memnto;
+        }
+
+        public void RemoveEntry(int index )
+        {
+            entries.RemoveAt(index);
+            count--;
+        }
+
+        public override string ToString()
+        {
+            return string.Join(Environment.NewLine, entries);
+        }
     }
 }
